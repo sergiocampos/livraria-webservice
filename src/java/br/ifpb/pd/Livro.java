@@ -10,17 +10,26 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.xml.bind.annotation.XmlRootElement;
 
 /**
  *
  * @author sergio
  */
 @Entity
+@XmlRootElement
 public class Livro implements Serializable {
     private static final long serialVersionUID = 1L;
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
+    
+    private int codigo;
+    private String titulo;
+    private String editora;
+    private String isbn;
+    private int edicao;
+    private String autor;
 
     public Long getId() {
         return id;
@@ -29,6 +38,56 @@ public class Livro implements Serializable {
     public void setId(Long id) {
         this.id = id;
     }
+
+    public int getCodigo() {
+        return codigo;
+    }
+
+    public void setCodigo(int codigo) {
+        this.codigo = codigo;
+    }
+
+    public String getAutor() {
+        return autor;
+    }
+
+    public void setAutor(String autor) {
+        this.autor = autor;
+    }
+
+    public int getEdicao() {
+        return edicao;
+    }
+
+    public void setEdicao(int edicao) {
+        this.edicao = edicao;
+    }
+
+    public String getEditora() {
+        return editora;
+    }
+
+    public void setEditora(String editora) {
+        this.editora = editora;
+    }
+
+    public String getIsbn() {
+        return isbn;
+    }
+
+    public void setIsbn(String isbn) {
+        this.isbn = isbn;
+    }
+
+    public String getTitulo() {
+        return titulo;
+    }
+
+    public void setTitulo(String titulo) {
+        this.titulo = titulo;
+    }
+    
+    
 
     @Override
     public int hashCode() {

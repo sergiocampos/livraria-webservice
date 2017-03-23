@@ -29,7 +29,22 @@ public class LivroWS {
     }
     
     @WebMethod(operationName = "cadastrar")
-    public boolean cadastrar(Livro l){
+    public boolean cadastrar(@WebParam(name = "l") Livro l){
         return livros.add(l);
+    }
+    
+    @WebMethod(operationName = "alterar")
+    public void alterar(@WebParam(name = "") Livro l){
+        
+    }
+    
+    @WebMethod(operationName = "buscar")
+    public void buscar(@WebParam(name = "") Livro l){
+        
+    }
+    
+        @WebMethod(operationName = "excluir")
+    public void excluir(@WebParam(name = "") Livro l){
+        
     }
 }
