@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<xs:schema version="1.0" targetNamespace="http://pd.ifpb.br/" xmlns:tns="http://pd.ifpb.br/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+  <xs:element name="alterar" nillable="true" type="tns:alterar"/>
+
+  <xs:element name="alterarResponse" nillable="true" type="tns:alterarResponse"/>
+
+  <xs:element name="buscar" nillable="true" type="tns:buscar"/>
+
+  <xs:element name="buscarResponse" nillable="true" type="tns:buscarResponse"/>
+
+  <xs:element name="cadastrar" nillable="true" type="tns:cadastrar"/>
+
+  <xs:element name="cadastrarResponse" nillable="true" type="tns:cadastrarResponse"/>
+
+  <xs:element name="excluir" nillable="true" type="tns:excluir"/>
+
+  <xs:element name="excluirResponse" nillable="true" type="tns:excluirResponse"/>
+
+  <xs:element name="hello" nillable="true" type="tns:hello"/>
+
+  <xs:element name="helloResponse" nillable="true" type="tns:helloResponse"/>
+
+  <xs:complexType name="excluir">
+    <xs:sequence>
+      <xs:element name="arg0" type="tns:livro" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="livro">
+    <xs:sequence>
+      <xs:element name="autor" type="xs:string" minOccurs="0"/>
+      <xs:element name="codigo" type="xs:string" minOccurs="0"/>
+      <xs:element name="edicao" type="xs:string" minOccurs="0"/>
+      <xs:element name="editora" type="xs:string" minOccurs="0"/>
+      <xs:element name="id" type="xs:long" minOccurs="0"/>
+      <xs:element name="isbn" type="xs:string" minOccurs="0"/>
+      <xs:element name="titulo" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="excluirResponse">
+    <xs:sequence/>
+  </xs:complexType>
+
+  <xs:complexType name="buscar">
+    <xs:sequence>
+      <xs:element name="arg0" type="tns:livro" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="buscarResponse">
+    <xs:sequence/>
+  </xs:complexType>
+
+  <xs:complexType name="hello">
+    <xs:sequence>
+      <xs:element name="name" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="helloResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="cadastrar">
+    <xs:sequence>
+      <xs:element name="autor" type="xs:string" minOccurs="0"/>
+      <xs:element name="edicao" type="xs:string" minOccurs="0"/>
+      <xs:element name="editora" type="xs:string" minOccurs="0"/>
+      <xs:element name="isbn" type="xs:string" minOccurs="0"/>
+      <xs:element name="titulo" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="cadastrarResponse">
+    <xs:sequence/>
+  </xs:complexType>
+
+  <xs:complexType name="alterar">
+    <xs:sequence>
+      <xs:element name="arg0" type="tns:livro" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="alterarResponse">
+    <xs:sequence/>
+  </xs:complexType>
+</xs:schema>
+
